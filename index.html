@@ -1,116 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aryan Digital – Script 2 | Expense vs Investment</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aryan Digital — Script Library</title>
   <style>
-    * { box-sizing: border-box; font-family: "Poppins", sans-serif; margin: 0; padding: 0; }
-    body {
-      background: #0d0d0d;
-      color: #f5f5f5;
-      padding: 30px;
-      line-height: 1.7;
+    * { box-sizing: border-box; font-family: "Poppins", sans-serif; }
+    body { background: #f9fafb; margin: 0; color: #222; }
+    header {
+      background: white; border-bottom: 1px solid #ddd;
+      padding: 15px 30px; display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
     }
-    h1 {
-      text-align: center;
-      color: #4fa4e6;
-      margin-bottom: 25px;
-      font-size: 1.8rem;
+    header h1 { font-size: 1.2rem; font-weight: 600; margin: 0; }
+    .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+    h2 { text-align: center; font-size: 1.8rem; margin-bottom: 30px; }
+    .btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+    button {
+      padding: 10px 18px; border-radius: 50px; border: 1px solid #ccc;
+      background: white; cursor: pointer; transition: 0.3s;
+      font-weight: 500;
     }
-    h2 {
-      margin-top: 25px;
-      color: #4fa4e6;
-      border-bottom: 1px solid #4fa4e6;
-      padding-bottom: 5px;
+    button.active { background: #4f46e5; color: white; border-color: #4f46e5; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    button:hover:not(.active) { background: #f3f4f6; }
+    .script-box {
+      background: white; padding: 25px; border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border: 1px solid #eee; transition: all 0.3s ease-in-out;
     }
-    .scene {
-      margin: 20px 0;
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.05);
-      transition: 0.3s;
+    .script-title { color: #4f46e5; font-size: 1.2rem; margin-bottom: 10px; font-weight: 600; }
+    pre {
+      white-space: pre-wrap; font-size: 0.95rem; line-height: 1.6;
+      color: #333; margin: 0;
     }
-    .scene:hover {
-      transform: scale(1.02);
-    }
-    .char {
-      font-weight: 600;
-      color: #4fa4e6;
-    }
-    .dialogue {
-      margin: 5px 0 15px 0;
-    }
-    .caption {
-      margin-top: 15px;
-      background: #222;
-      padding: 15px;
-      border-radius: 10px;
-      font-style: italic;
-      color: #ccc;
-    }
-    .outro {
-      text-align: center;
-      font-weight: 600;
-      color: #4fa4e6;
-      margin-top: 25px;
-    }
-    .footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
+    footer {
+      text-align: center; padding: 30px 10px; margin-top: 50px;
+      background: white; border-top: 1px solid #ddd; font-size: 0.9rem; color: #555;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>🎯 Aryan Digital</h1>
+    <p style="font-size:0.9rem; color:#666;">Marketing • Growth • Gujarati Friendly</p>
+  </header>
 
-  <h1>🎬 “Logo ne lagtu chhe – ‘Digital marketing ek expense chhe’”</h1>
+  <div class="container">
+    <h2>🎬 Script Library</h2>
+    <div class="btns">
+      <button class="active" onclick="showScript(1)">🎬 Script 1</button>
+      <button onclick="showScript(2)">🎬 Script 2</button>
+      <button onclick="showScript(3)">🎬 Script 3</button>
+    </div>
 
-  <div class="scene">
-    <h2>🎭 Scene 1: Intro (0–5 sec)</h2>
-    <p class="dialogue"><span class="char">📍 Setting:</span> Office / coffee table — C bills ya ad report joi rahyo chhe.</p>
-    <p class="dialogue"><span class="char">C (serious tone):</span> “Bhai, aa digital marketing maa kharcho khub thai jaye chhe! Itlu paisa mukva nu shu faydo?”</p>
-    <p class="dialogue"><span class="char">M (calm smile):</span> “Arre bhai, tame kharcho nai, investment joi rahya cho 💡”</p>
-  </div>
-
-  <div class="scene">
-    <h2>🎭 Scene 2: Explanation (5–20 sec)</h2>
-    <p class="dialogue"><span class="char">M:</span> “Digital marketing e expense nathi… e ek system chhe je tamne return aape chhe.”</p>
-    <p class="dialogue"><span class="char">C (confused):</span> “Return? Su matlab?”</p>
-    <p class="dialogue"><span class="char">M (explaining):</span> “Jya tame traditional marketing maa banner mukvo, ena result nathi malta... Pan digital maa tame data joi sako, audience samji sako, ane sale sudhi paunchi sako!”</p>
-  </div>
-
-  <div class="scene">
-    <h2>💡 Scene 3: Comparison (20–30 sec)</h2>
-    <p class="dialogue"><span class="char">M:</span> “Expense e hoy je paisa pachho na aave... Investment e hoy je paisa double lai aave 💰”</p>
-    <p class="dialogue"><span class="char">C:</span> “To digital marketing e smart investment chhe?”</p>
-    <p class="dialogue"><span class="char">M (smiling):</span> “Bilkul! Smart spend karo, blind nai 😉”</p>
-  </div>
-
-  <div class="scene">
-    <h2>🎯 Scene 4: Outro / Punchline (30–40 sec)</h2>
-    <p class="dialogue"><span class="char">M (looking at camera):</span> “So next time koi kahe ke marketing e expense chhe, to eno jawab ek j — ‘Smartly invest kar!’ 😎”</p>
-
-    <div class="caption">
-      📢 Caption on screen:<br>
-      “Spend Smart, Not Blind 💸”<br><br>
-      🎵 Background: Light motivational / upbeat tone<br><br>
-      🔥 Optional Caption Lines:<br>
-      “Digital marketing = Growth tool, not a cost center 🚀”<br>
-      “Expense mindset badlo, investment impact dekho 💡”<br>
-      “Marketing ma paisa mukvo nahi, business vadhaadvo chhe 💰”
+    <div class="script-box" id="scriptBox">
+      <div class="script-title" id="scriptTitle">Client ne lage ke ek post muki de to marketing thai gayi!</div>
+      <pre id="scriptContent"></pre>
     </div>
   </div>
 
-  <div class="outro">
-    💡 Script by Aryan Digital | Reel Duration: ~45 sec
-  </div>
+  <footer>© <span id="year"></span> Aryan Digital — Built with ❤️</footer>
 
-  <div class="footer">
-    © 2025 Aryan Digital | All Rights Reserved
-  </div>
+  <script>
+    const scripts = {
+      1: {
+        title: "🎬 Reel Title: Client ne lage ke ek post muki de to marketing thai gayi!",
+        content: `🎥 Duration: ~45 seconds
+🎭 Cast:
+Client (C) – overconfident, thodu funny tone
+Marketer (M) – calm, smart, thodu sarcastic humor
 
+🎬 Scene 1: Intro (0–5 sec)
+📍 Setting: Office / laptop open / phone par Instagram post
+C (excited tone):
+“Bhai, Instagram par post muki de... marketing thai gayi ne?”
+M (confused look):
+“Bas ek post muki ne marketing? 😅”
+
+🎭 Scene 2: Sarcastic Explanation (5–15 sec)
+M:
+“Bhai, marketing e koi photo mukva nu naam nathi...
+post mukva to badha kare chhe!”
+(pauses with a half-smile)
+M:
+“Pan e post maa content, caption, timing, audience target...
+badhu matter kare chhe!”
+
+😂 Scene 3: Reality Check (15–25 sec)
+C (thodu laugh kari):
+“Areh bhai, content to simple muki de, viral thai jase!”
+M (sarcastic smile):
+“Haa bhai, algorithm ne to tamaru naam yaad chhe ne?
+‘Aa post viral karvu chhe Aryan bhai nu!’ 😂”
+
+💡 Scene 4: Education with Humor (25–35 sec)
+M:
+“Marketing ek process chhe —
+strategy, design, caption, consistency,
+ane sabse important, patience!”
+C (thinking look):
+“To post mukva thi kaam nai chale?”
+M (smiling):
+“Nai bhai… post mukva to shuruaat chhe,
+marketing to journey chhe!”
+
+🎯 Scene 5: Outro / Punchline (35–45 sec)
+M:
+“So next time post mukva pehla,
+‘strategy muki de’ pan vicharjo 😎”
+
+📢 Caption (on screen):
+“Marketing = Strategy + Content + Time ⏳”
+
+🎵 Background sound:
+Funny office / sarcastic BGM
+(Ending maa wink ya thodu meme reaction add kari de)
+
+🔥 Optional Caption Lines:
+“Digital marketing ek post thi nahi, mindset thi thai 💡”
+“Post mukva easy chhe, engagement banavvu art chhe 🎯”
+“Algorithm ne bhagwan samjho nai, logic samjho 😎”`
+      },
+      2: {
+        title: "Festival Campaign Idea",
+        content: `🎉 Plan content calendars around local festivals (Navratri, Diwali, Holi).
+
+- Use festival color themes and festive filters.
+- Collaborate with influencers for giveaway posts.
+- Promote festive combos or special discounts.
+- Create countdown stories and polls for engagement.`
+      },
+      3: {
+        title: "Instagram Growth Plan",
+        content: `📈 3-month strategy for follower and engagement growth.
+
+- Optimize bio with clear call-to-action.
+- Post 3 Reels/week focused on trending audio.
+- Engage with comments within first 30 minutes.
+- Run small ₹500/day reach campaigns to boost best content.`
+      }
+    };
+
+    function showScript(num) {
+      const titleEl = document.getElementById("scriptTitle");
+      const contentEl = document.getElementById("scriptContent");
+      const buttons = document.querySelectorAll(".btns button");
+
+      buttons.forEach(btn => btn.classList.remove("active"));
+      buttons[num - 1].classList.add("active");
+
+      titleEl.textContent = scripts[num].title;
+      contentEl.textContent = scripts[num].content;
+    }
+
+    // Load Script 1 by default
+    document.getElementById("scriptContent").textContent = scripts[1].content;
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
